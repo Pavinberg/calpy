@@ -1,0 +1,8 @@
+%process,name,spec
+1,sulfur_dioxide,SPEC1
+1,nitrogen_oxides,SPEC2
+0,ozone,SPEC3
+0,PM,SPEC4
+0,toluene,SPEC5
+0,furan,SPEC6
+0,olefin,SPEC7

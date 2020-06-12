@@ -2,9 +2,9 @@
 
 [CALPUFF](http://www.src.com) is an advanced non-steady-state meteorological and air quality modeling system. Since its parameter file INP file (suffixed with ".inp") is old, ill-designed and hard to use, this python module provides functions to manage the INP file of CALPUFF model. This module needs python >= 3.6.
 
-The main idea is to use a class called `InpGroup` to operate the parameters by its methods. In the example below you will see operations like setting directory path, setting species information, setting source information and so on. In fact these operations just save the information into the data structure contained in the InpGroup class. When you call `calpy.run_calpuff` function, it will output all the parameters to a file called `calpuff.inp` and run the `calpuff.exe` in the `exe/` directory.
+The main idea is to use a class called `InpGroup` to operate the parameters by its methods. In the example below you will see operations like setting directory path, setting species information, setting source information and so on. In fact these operations just save the information into the data structure contained in the `InpGroup` class. When you call `calpy.run_calpuff` function, it will output all the parameters to a file called `calpuff.inp` and run the `calpuff.exe` in the `exe/` directory.
 
-The information is set in the csv files in `data/` directory. As long as you set them right, `calpy` will do the things left, e.g. setting number of species and sources. If you need to do multiple tasks, you can create a sub-directory in `data/` just like the example below, where I use a `data/winter/` directory to place all the data files and set this prefix by InpGroup.set_data_dir("data/winter"). See code below for details.
+The information is set in the csv files in `data/` directory. As long as you set them right, `calpy` will do the things left, e.g. setting number of species and sources. If you need to do multiple tasks, you can create a sub-directory in `data/` just like the example below, where I use a `data/winter/` directory to place all the data files and set this prefix by `InpGroup.set_data_dir("data/winter/")`. See code below for details.
 
 Before using the module, you need to place your `calpuff.exe` into the `exe/` directory and `calmet.dat` into the `data/winter/` directory.
 
